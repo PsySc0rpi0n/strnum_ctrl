@@ -41,7 +41,7 @@ char* up_sort (char* string){
     tmp_char = string [j];                //guarda em tmp_char, o char mais à esquerda antes de guardar lá o char mais pequeno
     string [j] = tmp_char_lower;          //guarda o menor char na posição mais à esquerda na string, posição 'j'
     string [i - 1] = tmp_char;            //coloca o char guardado em tmp_char na posição onde estava antes o char mais pequeno
-  //j++;                                  //recomeça a pesquisa pelo char mais pequeno a partir da posição anterior + 1 já que a posição anterior já tem o char mais pequeno encontrado em toda a string
+    i = 0;                                //recomeça a pesquisa pelo char mais pequeno a partir da posição anterior + 1 já que a posição anterior já tem o char mais pequeno encontrado em toda a string
   }
   string [len + 1] = '\0';
   free (string);
