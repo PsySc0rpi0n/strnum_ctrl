@@ -1,3 +1,25 @@
+#include <stdio.h>
+#include "text.h"
+#include "mem.h"
+
+/*****Invert String*****/
+char* reverse_string (char* string){
+  char *tmp_str = NULL;
+  short int i = 0;
+  size_t len = 0;
+
+  len = strlen (string);
+  tmp_str = mem_alloc (BUFFER);
+
+  for (i = len; i > 0; i--)
+    tmp_str [len - i] = string [i - 1];
+
+  tmp_str [len + 1] = '\0';
+
+  free (string);
+  return tmp_str;
+}
+
 /*****Sort Up*****/
 char* up_sort (char* string){
   char* tmp_string = NULL;
