@@ -2,20 +2,48 @@
 #include "text.h"
 #include "mem.h"
 
+void help_menu (void);
+
 int main (int argc, char** argv){
     char* string = NULL;
+    unsigned short int dbm;
 
-    string = mem_alloc (BUFFER);
+      if (argv [1] == "-dbm" || argv [1] == "--debug-mode")
+        dbm = 1;
+      else
+        dbm = 0;
+
+      if (argv [1] == "-h" || argv [1] == "--help")
+        help_menu ();
+
+    string = mem_alloc (BUFFER, dbm);
+
+    printf ("Insert a string:\n");
     fgets (string, BUFFER, stdin);
     if (string [strlen (string) - 1] == '\n')
       string [strlen (string) - 1] = '\0';
+
     printf ("The string is: %s\n", string);
     string = reverse_string (string);
+
     printf ("The inverted string is: %s\n", string);
     string = insertion_up_sort (string);
+
     printf ("The insertion up sorted string is: %s\n", string);
     string = insertion_down_sort (string);
+
     printf ("The insertion down sorted string is: %s\n", string);
-    mem_free (string);
+
+    mem_free (string, dbm);
     return 0;
+}
+
+
+void help_menu (){
+  puts ("^[[3;J^[[H^[[2J");
+  printf ("Help Menu\n");
+  printf ("Use <./string --debug-mode> or <./string -dbm> to enable debug mode!\n");
+  printf ("To display this help menu, type <./string --help> or <./string -h>\n");
+  printf ("Press any key to continue!\n");
+  getchar ();
 }

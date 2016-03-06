@@ -3,21 +3,22 @@
 /*****Memory Control*****/
 int mem_error = MEM_ERROR_OK;
 
-void* mem_alloc (const int size){
+void* mem_alloc (const int size, unsigned short int dbm){
     void* result = NULL;
 
     if ((result = malloc(size)) == NULL)
       mem_error = MEM_ERROR_NO_MEMORY;
-    else if (argc ==)
+    else if (dbm == 1)
       printf ("Allocated memory: %p\n", result);
 
     return result;
 }
 
-void mem_free (void* ptr){
+void mem_free (void* ptr, unsigned short int dbm){
   if (!ptr)
     return;
-  printf ("Free'ed memory: %p\n", ptr);
+  if (dbm == 1)
+    printf ("Free'ed memory: %p\n", ptr);
   free (ptr);
 }
 
