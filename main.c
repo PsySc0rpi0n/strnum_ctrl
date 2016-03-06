@@ -8,12 +8,12 @@ int main (int argc, char** argv){
     char* string = NULL;
     unsigned short int dbm;
 
-      if (argv [1] == "-dbm" || argv [1] == "--debug-mode")
+      if (!strcmp (argv [1], "-dbm") || !strcmp (argv [1], "--debug-mode"))
         dbm = 1;
       else
         dbm = 0;
 
-      if (argv [1] == "-h" || argv [1] == "--help")
+      if (!strcmp (argv [1], "-h") || !strcmp (argv [1], "--help"))
         help_menu ();
 
     string = mem_alloc (BUFFER, dbm);
