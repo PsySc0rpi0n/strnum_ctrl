@@ -8,7 +8,7 @@ void* mem_alloc (const int size){
 
     if ((result = malloc(size)) == NULL)
       mem_error = MEM_ERROR_NO_MEMORY;
-    else
+    else if (argc ==)
       printf ("Allocated memory: %p\n", result);
 
     return result;
