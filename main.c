@@ -14,6 +14,10 @@ int main (int argc, char** argv){
     printf ("The inverted string is: %s\n", string);
     string = up_sort (string);
     printf ("The up sorted string is: %s\n", string);
+    string = insertion_up_sort (string);
+    printf ("The insertion up sorted string is: %s\n", string);
+    string = hhh_up_sort (string);
+    printf ("The hhh up sorted string is: %s\n", string);
     free (string);
     return 0;
 }
