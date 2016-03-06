@@ -36,3 +36,23 @@ char* insertion_up_sort (char* string){
   }
   return string;
 }
+
+/*Insertion Down Sort*/
+char* insertion_down_sort (char* string){
+  short unsigned int y = 0, index_min = 0, x;
+  size_t len = 0;
+  char tmp_char;
+
+  len = strlen (string);
+  for (x = 0; x < len; x++){
+    index_min = x;
+    for (y = x; y < len; y++){
+      if (string [index_min] < string [y])
+        index_min = y;
+    }
+    tmp_char = string [x];
+    string [x] = string [index_min];
+    string [index_min] = tmp_char;
+  }
+  return string;
+}
