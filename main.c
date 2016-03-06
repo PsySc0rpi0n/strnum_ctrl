@@ -40,7 +40,7 @@ int main (int argc, char** argv){
 
 
 void help_menu (){
-  puts ("^[[3;J^[[H^[[2J");
+  puts ("\x1b[H\x1b[2J");
   printf ("Help Menu\n");
   printf ("Use <./string --debug-mode> or <./string -dbm> to enable debug mode!\n");
   printf ("To display this help menu, type <./string --help> or <./string -h>\n");
