@@ -16,6 +16,6 @@ int main (int argc, char** argv){
     printf ("The insertion up sorted string is: %s\n", string);
     string = insertion_down_sort (string);
     printf ("The insertion down sorted string is: %s\n", string);
-    free (string);
+    mem_free (string);
     return 0;
 }
