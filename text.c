@@ -59,17 +59,17 @@ char* insertion_down_sort (char* string){
 
 unsigned short int string_cmp (char* str_a, char* str_b){
   size_t len_a = strlen (str_a), len_b = strlen (str_b);
-  unsigned short int i, diff;
+  unsigned short int i, status;
 
   if (len_a != len_b)
-    printf ("Cannot copy strings... Sizes mismatches!\n");
+    status = 2;
   else{
     for (i = 0; i < len_a; i++){
       if (str_a [i] != str_b [i])
-        diff = 1;
+        status = 1;
       else
-        diff = 0;
+        status = 0;
     }
   }
-  return diff;
+  return status;
 }
