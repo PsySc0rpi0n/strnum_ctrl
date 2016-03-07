@@ -39,7 +39,7 @@ int main (int argc, char** argv){
                 break;
       case 0:   printf ("String are equal!\n");
                 break;
-      case 1:   printf ("Strings are different!\\n");
+      case 1:   printf ("Strings are different!\n");
                 break;
       default:  printf ("Unkown result!\n");
     }
