@@ -61,15 +61,20 @@ unsigned short int string_cmp (char* str_a, char* str_b){
   size_t len_a = strlen (str_a), len_b = strlen (str_b);
   unsigned short int i, status;
 
-  if (len_a != len_b)
+  if (len_a != len_b){
     status = 2;
+    printf ("here-1\n");
+  }
   else{
     for (i = 0; i < len_a; i++){
-      if (str_a [i] != str_b [i])
+      if (str_a [i] != str_b [i]){
         status = 1;
+        printf ("here0\n");
+      }
       else
         status = 0;
     }
   }
+  printf ("here1\n");
   return status;
 }

@@ -2,7 +2,7 @@
 #include "text.h"
 #include "mem.h"
 
-void help_menu (void);
+//void help_menu (void);
 
 int main (int argc, char** argv){
     char* string = NULL;
@@ -24,14 +24,14 @@ int main (int argc, char** argv){
       string [strlen (string) - 1] = '\0';
 
     printf ("The string is: %s\n", string);
+
     string = reverse_string (string);
+    printf ("The reversed string is: %s\n", string);
 
-    printf ("The inverted string is: %s\n", string);
     string = insertion_up_sort (string);
-
     printf ("The insertion up sorted string is: %s\n", string);
-    string = insertion_down_sort (string);
 
+    string = insertion_down_sort (string);
     printf ("The insertion down sorted string is: %s\n", string);
 
     switch (string_cmp (string, "carlo")) {
@@ -49,7 +49,7 @@ int main (int argc, char** argv){
 }
 
 
-void help_menu (){
+void help_menu (void){
   puts ("\x1b[H\x1b[2J");
   printf ("Help Menu\n");
   printf ("Use <./string --debug-mode> or <./string -dbm> to enable debug mode!\n");
