@@ -34,7 +34,7 @@ int main (int argc, char** argv){
 
     printf ("The insertion down sorted string is: %s\n", string);
 
-    switch (string_cmp (string, "carl")) {
+    switch (string_cmp (string, "carlo")) {
       case 2:  printf ("Cannot Compare. Sizes mismatch!\n");
                 break;
       case 0:   printf ("String are equal!\n");
