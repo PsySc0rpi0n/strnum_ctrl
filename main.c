@@ -28,10 +28,14 @@ int main (int argc, char** argv){
 
     do {
         menu_Main ();
+        print ("Choose an option:\n");
         scanf (" %d", opt);
         switch (opt){
-            case '1':
-            case '2':
+            case 1:   menu_Strings ();
+                      break;
+            case 2:   menu_Numbers ();
+                      break;
+            default:  print ("Invalid option!\n");
         }
     }while (opt != 0);
 
