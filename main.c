@@ -23,17 +23,6 @@ int main (int argc, char** argv){
     if (string [strlen (string) - 1] == '\n')
       string [strlen (string) - 1] = '\0';
 
-    printf ("The string is: %s\n", string);
-
-    string = reverse_string (string);
-    printf ("The reversed string is: %s\n", string);
-
-    string = insertion_up_sort (string);
-    printf ("The insertion up sorted string is: %s\n", string);
-
-    string = insertion_down_sort (string);
-    printf ("The insertion down sorted string is: %s\n", string);
-
     switch (string_cmp (string, "carlo")) {
       case 2:  printf ("Cannot Compare. Sizes mismatch!\n");
                 break;
@@ -54,6 +43,6 @@ void help_menu (void){
   printf ("Help Menu\n");
   printf ("Use <./string --debug-mode> or <./string -dbm> to enable debug mode!\n");
   printf ("To display this help menu, type <./string --help> or <./string -h>\n");
-  printf ("Press any key to continue!\n");
+  printf ("Press any key to exit!\n");
   getchar ();
 }
