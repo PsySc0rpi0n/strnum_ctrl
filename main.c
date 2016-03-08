@@ -8,6 +8,7 @@
 int main (int argc, char** argv){
     char* string = NULL;
     unsigned short int dbm;
+    unsigned short int opt;
 
       if (!strcmp (argv [1], "-dbm") || !strcmp (argv [1], "--debug-mode"))
         dbm = 1;
@@ -29,9 +30,12 @@ int main (int argc, char** argv){
     do {
         menu_Main ();
         print ("Choose an option:\n");
-        scanf (" %d", opt);
+        scanf (" %d", &opt);
         switch (opt){
             case 1:   menu_Strings ();
+                      printf ("Choose an option:\n");
+                      scanf (" %d", &opt);
+                      func_select (opt);
                       break;
             case 2:   menu_Numbers ();
                       break;
@@ -56,7 +60,7 @@ int main (int argc, char** argv){
 
 void help_menu (void){
   puts ("\x1b[H\x1b[2J");
-  printf ("Help Menu\n");
+  printf ("Help Menu\https://github.com/PsySc0rpi0n/strnum_ctrl.gitn");
   printf ("Use <./string --debug-mode> or <./string -dbm> to enable debug mode!\n");
   printf ("To display this help menu, type <./string --help> or <./string -h>\n");
   printf ("Press any key to exit!\n");

@@ -26,3 +26,18 @@ void menu_Numbers (void){
   printf ("\t[0] - Back\n");
   puts ("");
 }
+
+void func_select (const unsigned short int opt, const unsigned short int mflag, void* value){
+  switch (opt){
+    case 1:  if (mflag == 1)
+               reverse_string (value);
+             else
+               reverse_number (value);
+             break;
+    case 2:  if (mflag == 1)
+               insertion_up_sort (string);
+             else
+               ;
+             break;
+  }
+}
