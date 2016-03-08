@@ -78,3 +78,17 @@ unsigned short int string_cmp (char* str_a, char* str_b){
   printf ("here1\n");
   return status;
 }
+
+
+void testing (char* string){
+    printf ("The string is: %s\n", string);
+
+    string = reverse_string (string);
+    printf ("The reversed string is: %s\n", string);
+
+    string = insertion_up_sort (string);
+    printf ("The insertion up sorted string is: %s\n", string);
+
+    string = insertion_down_sort (string);
+    printf ("The insertion down sorted string is: %s\n", string);
+}
