@@ -23,12 +23,14 @@ int main (int argc, char** argv){
     if (string [strlen (string) - 1] == '\n')
       string [strlen (string) - 1] = '\0';
 
+    testing (string);
+
     switch (string_cmp (string, "carlo")) {
-      case 2:  printf ("Cannot Compare. Sizes mismatch!\n");
-                break;
       case 0:   printf ("String are equal!\n");
                 break;
       case 1:   printf ("Strings are different!\n");
+                break;
+      case 2:   printf ("Cannot Compare. Sizes mismatch!\n");
                 break;
       default:  printf ("Unkown result!\n");
     }
