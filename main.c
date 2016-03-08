@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "text.h"
 #include "mem.h"
+#include "menu_Main.h"
 
 //void help_menu (void);
 
@@ -23,7 +24,16 @@ int main (int argc, char** argv){
     if (string [strlen (string) - 1] == '\n')
       string [strlen (string) - 1] = '\0';
 
-    testing (string);
+    //testing (string);
+
+    do {
+        menu_Main ();
+        scanf (" %d", opt);
+        switch (opt){
+            case '1':
+            case '2':
+        }
+    }while (opt != 0);
 
     switch (string_cmp (string, "carlo")) {
       case 0:   printf ("String are equal!\n");
